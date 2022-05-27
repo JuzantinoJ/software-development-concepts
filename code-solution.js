@@ -1,14 +1,19 @@
 //Create 2 variable
-const text = 'There is a bird' // string of text
-const word = "bird" //the word that is going to be looked for
+const text = 'Your childhood teacher did not wrong you when they taught you that there should be three, or four, or five sentences in a paragraph. It is important to understand, however, that the aim in teaching this was not to impart a hard-and-fast rule of grammar, drawn from an authoritative-but-dusty book. The true aim of this strategy was to teach you that your ideas must be well supported to be persuasive and effective.' // string of text
+const word = 'you' //the word that is going to be looked for
 
-//create a function to find if word exists in the text
-const findPattern = (input1, input2) => { //takes 2 arguments
-    if (input1.includes(input2)){ //if arg 1 includes input 2 
-     return "Word exist" 
-    } else {
-        return "Word does not exist"
-    }
+
+const search_word = (text, word) => { //function takes 2 argument
+    // split the text into individual arrays
+    //filter through the text  
+    // find a match of the word length
+    const result = text.split(" ").filter((w) => w.match(word)).length; 
+         return `${word} was found ${result} times.`;
+};
+
+
+
+
+console.log(search_word(text , word))
+
     
-}
-console.log(findPattern(text,word))
